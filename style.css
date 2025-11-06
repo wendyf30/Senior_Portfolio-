@@ -1,84 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Senior Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>Senior Portfolio</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#cfus">CFUs</a></li>
-          <li><a href="#lab3">Lab 3</a></li>
-          <li><a href="#congressional-app">Congressional App</a></li>
-          <li><a href="#goals">Goals</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <section id="hero">
-    <img src="your-image.jpg" alt="Profile Picture" class="profile-pic" />
-    <h2>Welcome to My Portfolio</h2>
-    <p>Explore my work, projects, and academic journey below.</p>
-  </section>
+/* Color Scheme */
+:root {
+  --dark-blue: #0a1f44;
+  --white: #ffffff;
+  --black: #111111;
+  --accent: #007bff;
+  --light-blue: #1a3c78;
+}
 
-  <section id="about" class="content-section">
-    <h2>About Me</h2>
-    <p>
-      Hello! My name is [Your Name], and I’m a passionate senior student
-      interested in technology, coding, and innovation. I love solving problems
-      and learning new things every day.
-    </p>
-  </section>
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  line-height: 1.6;
+}
 
-  <section id="cfus" class="content-section">
-    <h2>CFUs</h2>
-    <p>
-      Here you can find my completed CFU (Check For Understanding) assignments,
-      showcasing my progress and understanding of course materials.
-    </p>
-  </section>
+/* Header */
+header {
+  background-color: var(--black);
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
 
-  <section id="lab3" class="content-section">
-    <h2>Lab 3</h2>
-    <p>
-      In Lab 3, I explored new programming techniques and developed a project
-      that challenged my problem-solving skills.
-    </p>
-  </section>
+header .container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  <section id="congressional-app" class="content-section">
-    <h2>Congressional App</h2>
-    <p>
-      My Congressional App Challenge entry demonstrates my ability to create
-      impactful solutions through software. It combines creativity and
-      technical skill to solve a real-world problem.
-    </p>
-  </section>
+header h1 {
+  color: var(--white);
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
 
-  <section id="goals" class="content-section">
-    <h2>Goals</h2>
-    <ul>
-      <li>Graduate with honors and strong technical experience.</li>
-      <li>Build impactful software that helps people.</li>
-      <li>Continue learning and growing as a developer.</li>
-    </ul>
-  </section>
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
 
-  <footer>
-    <p>© 2025 [Your Name] | All Rights Reserved</p>
-    <p>
-      <a href="https://github.com" target="_blank">GitHub</a> |
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
-      <a href="https://yourwebsite.com" target="_blank">Personal Website</a>
-    </p>
-  </footer>
-</body>
-</html>
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
 
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: var(--light-blue);
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--white);
+  margin-bottom: 1rem;
+}
+
+#hero h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#hero p {
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+/* Content Sections */
+.content-section {
+  width: 80%;
+  margin: 2rem auto;
+  background-color: #0f2b5c;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.content-section h2 {
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.content-section p, .content-section ul {
+  font-size: 1rem;
+  color: #eaeaea;
+}
+
+ul {
+  list-style-type: square;
+  margin-left: 1.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: var(--black);
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
